@@ -1,11 +1,17 @@
 import { Component } from '@angular/core';
-import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
+import { IonApp, IonRouterOutlet, IonIcon } from '@ionic/angular/standalone';
+import { addIcons } from 'ionicons';
+import { cartOutline, list } from 'ionicons/icons';
 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
-  imports: [IonApp, IonRouterOutlet],
+  styleUrls: ['app.component.scss'],
+  standalone: true,
+  imports: [IonApp, IonRouterOutlet, IonIcon],
 })
 export class AppComponent {
-  constructor() {}
+  constructor() {
+    addIcons({ cartOutline, list });
+  }
 }

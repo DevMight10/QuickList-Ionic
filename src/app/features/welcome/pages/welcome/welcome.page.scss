@@ -1,0 +1,88 @@
+:host {
+  /* Fondo degradado para toda la página */
+  --background: none;
+  display: block;
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #3571e0 0%, #764ba2 100%);
+}
+
+ion-content {
+  --background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome-container {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.welcome-logo-circle {
+  background: #223447;
+  width: 110px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 26px;
+  box-shadow: 0 4px 16px rgba(52, 52, 52, 0.1);
+}
+
+
+.welcome-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+  text-align: center;
+  background-color: #1A2935;
+  padding: 25px;
+}
+
+.welcome-subtitle {
+  font-size: 1.4rem; /* Aumentado */
+  color: #fff;
+  margin-bottom: 12px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+}
+
+.welcome-message {
+  font-size: 1.05rem; /* Ligeramente aumentado */
+  color: #e0e0e0;
+  margin-bottom: 40px; /* Más espacio */
+  line-height: 1.6; /* Mejor legibilidad */
+  text-align: center;
+}
+
+.welcome-button {
+  --background: #fff;
+  --color: #3571e0;
+  --background-activated: #f0f0f0;
+  font-weight: bold;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 240px;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  margin: 0 auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra para elevación */
+  transition: all 0.3s ease; /* Transición suave */
+
+  &:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al pasar el ratón */
+  }
+}
+
+.logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
