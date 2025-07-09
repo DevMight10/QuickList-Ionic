@@ -1,13 +1,12 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>welcome</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">welcome</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="welcome-container">
+    <app-app-logo></app-app-logo>
+    <p class="welcome-subtitle">¡Bienvenido!</p>
+    <p class="welcome-message">
+      Gestiona tus productos de manera fácil y rápida
+    </p>
+    <ion-button expand="block" class="welcome-button" (click)="navigateToLogin()">
+      Empezar
+    </ion-button>
+  </div>
 </ion-content>
