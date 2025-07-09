@@ -1,22 +1,44 @@
-<ion-content [fullscreen]="true" class="ion-padding">
+<ion-content [fullscreen]="true" class="login-content">
   <div class="login-container">
-    <div class="login-logo">
-      <ion-icon name="cart-outline"></ion-icon>
+    
+    <div class="login-card">
+      
+      <div class="logo-container">
+        <app-app-logo></app-app-logo>
+      </div>
+      
+      <h1 class="login-title">Iniciar Sesión</h1>
+      
+      <div class="form-container">
+        
+        <div class="input-group">
+          <label class="input-label">Usuario</label>
+          <ion-input 
+            class="custom-input"
+            value=""
+            fill="outline">
+          </ion-input>
+        </div>
+        
+        <div class="input-group">
+          <label class="input-label">Contraseña</label>
+          <ion-input 
+            class="custom-input"
+            type="password" 
+            value=""
+            fill="outline">
+          </ion-input>
+        </div>
+        
+      </div>
+      
+      <ion-button 
+        expand="block" 
+        class="login-button"
+        color="primary">
+        Iniciar Sesión
+      </ion-button>
+
     </div>
-
-    <h1 class="login-title">Iniciar Sesión</h1>
-
-    <ion-list class="login-form">
-      <ion-item lines="full">
-        <ion-input label="Usuario" label-placement="stacked" value="admin"></ion-input>
-      </ion-item>
-      <ion-item lines="full">
-        <ion-input label="Contraseña" type="password" label-placement="stacked" value="123456"></ion-input>
-      </ion-item>
-    </ion-list>
-
-    <ion-button expand="block" shape="round" class="login-button">Iniciar Sesión</ion-button>
-    <p class="login-credentials">Usuario: admin | Contraseña: 123456</p>
   </div>
 </ion-content>
-

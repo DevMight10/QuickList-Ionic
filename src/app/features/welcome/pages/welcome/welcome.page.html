@@ -1,12 +1,39 @@
 <ion-content [fullscreen]="true">
   <div class="welcome-container">
-    <app-app-logo></app-app-logo>
-    <p class="welcome-subtitle">¡Bienvenido!</p>
-    <p class="welcome-message">
-      Gestiona tus productos de manera fácil y rápida
-    </p>
-    <ion-button expand="block" class="welcome-button" (click)="navigateToLogin()">
-      Empezar
-    </ion-button>
+    
+    <div class="content-wrapper">
+      
+      <div class="logo-section">
+        <div class="logo-wrapper">
+          <app-app-logo></app-app-logo>
+        </div>
+        <div class="brand-glow"></div>
+      </div>
+      
+      <div class="text-section">
+        <h1 class="welcome-subtitle">¡Bienvenido!</h1>
+        <p class="welcome-message">
+          Gestiona tus productos de manera fácil y rápida
+        </p>
+      </div>
+      
+      <div class="action-section">
+        <ion-button 
+          expand="block" 
+          class="welcome-button" 
+          (click)="navigateToLogin()">
+          <span class="button-text">Empezar</span>
+          <ion-icon name="arrow-forward" slot="end"></ion-icon>
+        </ion-button>
+      </div>
+      
+    </div>
+    
+    <div class="floating-elements">
+      <div class="floating-circle circle-1"></div>
+      <div class="floating-circle circle-2"></div>
+      <div class="floating-circle circle-3"></div>
+    </div>
+    
   </div>
 </ion-content>
