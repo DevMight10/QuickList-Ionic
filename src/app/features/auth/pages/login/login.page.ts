@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonInput, IonButton, IonToast } from '@ionic/angular/standalone';
@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
   standalone: true,
-  imports: [IonContent, IonInput, IonButton, CommonModule, FormsModule, AppLogoComponent, IonToast]
+  imports: [IonContent, IonInput, IonButton, CommonModule, AppLogoComponent, IonToast, FormsModule]
 })
 export class LoginPage {
 
@@ -21,6 +21,12 @@ export class LoginPage {
   toastMessage = '';
 
   constructor(private authService: AuthService, private router: Router) { }
+
+  ionViewWillEnter() {
+    // Limpiar los campos de usuario y contraseña cada vez que la vista entra
+    this.username = '';
+    this.password = '';
+  }
 
   async onLogin() {
     if (this.authService.login(this.username, this.password)) {

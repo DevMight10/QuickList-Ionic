@@ -1,0 +1,39 @@
+<app-product-header title="Detalle del Producto" [showBackButton]="true" [showEditButton]="true" (edit)="onEdit()"></app-product-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div *ngIf="product" class="product-detail-container">
+    <div class="image-section">
+      <img [src]="product.imageUrl || 'https://via.placeholder.com/300'" alt="Product Image">
+    </div>
+
+    <div class="info-section">
+      <h1 class="product-name">{{ product.name }}</h1>
+      <ion-badge color="medium" class="product-category">{{ product.category }}</ion-badge>
+      <p class="product-description">{{ product.description }}</p>
+      <p class="product-price" *ngIf="product.price">${{ product.price | number:'1.2-2' }}</p>
+    </div>
+
+    <div class="action-buttons">
+      <ion-button expand="block" color="primary" (click)="onEdit()">
+        <ion-icon slot="start" name="create-outline"></ion-icon>
+        Editar
+      </ion-button>
+      <ion-button expand="block" color="danger" (click)="onDelete()">
+        <ion-icon slot="start" name="trash-outline"></ion-icon>
+        Eliminar
+      </ion-button>
+    </div>
+  </div>
+
+  <div *ngIf="!product" class="no-product-found">
+    <p>Producto no encontrado.</p>
+  </div>
+
+  <ion-alert
+    [isOpen]="isAlertOpen"
+    header="Confirmar Eliminación"
+    message="¿Estás seguro de que quieres eliminar este producto?"
+    [buttons]="alertButtons"
+    (didDismiss)="setOpen(false)"
+  ></ion-alert>
+</ion-content>

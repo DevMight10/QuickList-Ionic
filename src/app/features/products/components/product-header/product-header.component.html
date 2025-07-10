@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button *ngIf="showBackButton" [defaultHref]="backButtonHref"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ title }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button *ngIf="showAddButton" (click)="onAdd()">
+        <ion-icon slot="icon-only" name="add-outline"></ion-icon>
+      </ion-button>
+      <ion-button *ngIf="showEditButton" (click)="onEdit()">
+        <ion-icon slot="icon-only" name="create-outline"></ion-icon>
+      </ion-button>
+      <ion-button *ngIf="showSaveButton" (click)="onSave()">
+        <ion-icon slot="icon-only" name="save-outline"></ion-icon>
+      </ion-button>
+      <ion-button *ngIf="showLogoutButton" (click)="onLogout()">
+        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+

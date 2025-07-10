@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 import { IonContent, IonButton, IonIcon } from '@ionic/angular/standalone';
 import { Router } from '@angular/router';
 import { AppLogoComponent } from '../../../../shared/components/app-logo/app-logo.component';
@@ -14,8 +13,7 @@ import { AppLogoComponent } from '../../../../shared/components/app-logo/app-log
     IonContent, 
     IonButton, 
     IonIcon,        // ← Agregado para el icono en el botón
-    CommonModule, 
-    FormsModule, 
+    CommonModule,  
     AppLogoComponent
   ]
 })

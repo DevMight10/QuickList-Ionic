@@ -1,0 +1,47 @@
+<app-product-header [title]="isEditMode ? 'Editar Producto' : 'Nuevo Producto'" [showBackButton]="true" [showSaveButton]="true" (save)="onSave()"></app-product-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="product-form-container">
+    <ion-list>
+      <!-- Sección de Imagen -->
+      <app-product-image-upload [imageUrl]="product.imageUrl" (imageSelected)="product.imageUrl = $event"></app-product-image-upload>
+
+      <!-- Nombre del Producto -->
+      <ion-item>
+        <ion-input label="Nombre del Producto" label-placement="floating" [(ngModel)]="product.name" placeholder="Ej: iPhone 15 Pro"></ion-input>
+      </ion-item>
+
+      <!-- Descripción -->
+      <ion-item>
+        <ion-textarea label="Descripción" label-placement="floating" [(ngModel)]="product.description" placeholder="Describe tu producto..."></ion-textarea>
+      </ion-item>
+
+      <!-- Categoría -->
+      <ion-item>
+        <ion-select label="Categoría" label-placement="floating" [(ngModel)]="product.category" placeholder="Selecciona una categoría">
+          <ion-select-option *ngFor="let category of categories" [value]="category">{{ category }}</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <!-- Precio -->
+      <ion-item>
+        <ion-input label="Precio (Opcional)" label-placement="floating" type="number" [(ngModel)]="product.price" placeholder="0.00"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-button expand="block" class="save-button" (click)="onSave()">
+      Guardar
+    </ion-button>
+
+    <ion-button *ngIf="isEditMode" expand="block" color="danger" class="delete-button" (click)="onDelete()">
+      Eliminar
+    </ion-button>
+  </div>
+
+  <ion-toast
+    [isOpen]="isToastOpen"
+    [message]="toastMessage"
+    [duration]="3000"
+    (didDismiss)="setToastOpen(false)"
+  ></ion-toast>
+</ion-content>

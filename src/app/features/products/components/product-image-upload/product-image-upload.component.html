@@ -1,0 +1,22 @@
+<div class="image-upload-container">
+  <div class="image-placeholder" (click)="selectImage()">
+    <img *ngIf="imageUrl" [src]="imageUrl" alt="Product Image Preview">
+    <ion-icon *ngIf="!imageUrl" name="camera-outline"></ion-icon>
+    <span *ngIf="!imageUrl">Toca para agregar imagen</span>
+  </div>
+
+  <ion-action-sheet
+    [isOpen]="isActionSheetOpen"
+    header="Seleccionar Imagen"
+    [buttons]="actionSheetButtons"
+    (didDismiss)="setActionSheetOpen(false)"
+  ></ion-action-sheet>
+
+  <ion-toast
+    [isOpen]="isToastOpen"
+    [message]="toastMessage"
+    [duration]="3000"
+    (didDismiss)="setToastOpen(false)"
+  ></ion-toast>
+</div>
+

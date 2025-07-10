@@ -1,0 +1,24 @@
+<ion-card class="product-card">
+  <ion-item lines="none">
+    <ion-thumbnail slot="start">
+      <img [src]="product.imageUrl || 'https://via.placeholder.com/150'" alt="Product Image">
+    </ion-thumbnail>
+    <ion-label>
+      <h2>{{ product.name }}</h2>
+      <p>{{ product.description }}</p>
+      <ion-badge color="medium">{{ product.category }}</ion-badge>
+    </ion-label>
+    <div class="actions">
+      <ion-button fill="clear" size="small" color="success" (click)="onView()">
+        <ion-icon name="eye-outline"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" size="small" (click)="onEdit()">
+        <ion-icon name="create-outline"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" size="small" color="danger" class="danger-button" (click)="onDelete()">
+        <ion-icon name="trash-outline"></ion-icon>
+      </ion-button>
+    </div>
+  </ion-item>
+</ion-card>
+

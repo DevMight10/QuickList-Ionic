@@ -1,0 +1,72 @@
+ion-content {
+  --background: var(--ion-color-light);
+}
+
+.product-form-container {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+ion-list {
+  background: transparent;
+  padding: 0;
+}
+
+ion-item {
+  --background: #ffffff;
+  --border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.image-upload-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  .image-placeholder {
+    width: 150px;
+    height: 150px;
+    border: 2px dashed var(--ion-color-medium);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--ion-color-medium);
+    font-size: 0.9em;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    ion-icon {
+      font-size: 3em;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.save-button,
+.delete-button {
+  --border-radius: 8px;
+  font-weight: bold;
+  height: 48px;
+  margin-top: 15px;
+}
+
+.delete-button {
+  margin-top: 10px;
+}
