@@ -13,7 +13,7 @@ const BASE_PRODUCTS: Product[] = [
     description: 'Smartphone Apple con chip A17 Pro',
     category: 'Electrónicos',
     price: 999,
-    imageUrl: 'https://via.placeholder.com/150/0000FF/FFFFFF?text=iPhone',
+    imageUrl: '/assets/icon/logo-quicklist.png',
     status: 'Nuevo',
   },
   {
@@ -22,7 +22,7 @@ const BASE_PRODUCTS: Product[] = [
     description: 'Zapatillas deportivas cómodas',
     category: 'Calzado',
     price: 120,
-    imageUrl: 'https://via.placeholder.com/150/FF0000/FFFFFF?text=Nike',
+    imageUrl: '/assets/icon/logo-quicklist.png',
     status: 'Editado',
   },
   {
@@ -31,7 +31,7 @@ const BASE_PRODUCTS: Product[] = [
     description: 'Laptop profesional para desarrollo',
     category: 'Electrónicos',
     price: 1800,
-    imageUrl: 'https://via.placeholder.com/150/00FF00/FFFFFF?text=MacBook',
+    imageUrl: '/assets/icon/logo-quicklist.png',
     status: 'Visto',
   },
   

@@ -2,7 +2,7 @@
   <div class="image-placeholder" (click)="selectImage()">
     <img *ngIf="imageUrl" [src]="imageUrl" alt="Product Image Preview">
     <ion-icon *ngIf="!imageUrl" name="camera-outline"></ion-icon>
-    <span *ngIf="!imageUrl">Toca para agregar imagen</span>
+    <span *ngIf="!imageUrl">Agregar foto</span>
   </div>
 
   <ion-action-sheet

@@ -29,7 +29,7 @@ export class LoginPage {
   }
 
   async onLogin() {
-    if (this.authService.login(this.username, this.password)) {
+    if (await this.authService.login(this.username, this.password)) {
       this.router.navigate(['/products']); // Redirigir a la lista de productos 
     } else {
       this.toastMessage = 'Credenciales inválidas. Inténtalo de nuevo.';

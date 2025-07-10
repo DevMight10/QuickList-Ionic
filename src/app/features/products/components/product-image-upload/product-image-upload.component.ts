@@ -19,7 +19,6 @@ export class ProductImageUploadComponent {
   toastMessage = '';
 
   actionSheetButtons = [
-    { text: 'Tomar Foto', handler: () => this.takePicture() },
     { text: 'Seleccionar de Galería', handler: () => this.pickFromGallery() },
     { text: 'Cancelar', role: 'cancel' },
   ];
@@ -28,24 +27,6 @@ export class ProductImageUploadComponent {
 
   selectImage() {
     this.isActionSheetOpen = true;
-  }
-
-  async takePicture() {
-    try {
-      const image = await Camera.getPhoto({
-        quality: 90,
-        allowEditing: false,
-        resultType: CameraResultType.DataUrl,
-        source: CameraSource.Camera,
-      });
-      if (image.dataUrl) {
-        this.imageSelected.emit(image.dataUrl);
-      }
-    } catch (error) {
-      console.error('Error al tomar foto:', error);
-      this.toastMessage = 'Error al tomar foto.';
-      this.isToastOpen = true;
-    }
   }
 
   async pickFromGallery() {
