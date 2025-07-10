@@ -42,7 +42,7 @@ export class ProductImageUploadComponent {
       }
     } catch (error) {
       console.error('Error al seleccionar de galería:', error);
-      this.toastMessage = 'Error al seleccionar imagen.';
+      this.toastMessage = `Error al seleccionar imagen: ${error instanceof Error ? error.message : String(error)}`;
       this.isToastOpen = true;
     }
   }
